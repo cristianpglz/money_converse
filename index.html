@@ -1,0 +1,59 @@
+<!--
+    PROJECT MONEY CONVERT MASTERMIND ACADEMY
+-->
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="MONEY CONVERT" content="convert to the currency you want">
+    <title>MONEY CONVERT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <link rel="icon" href="./IMG/image-main.png" type="image-main-money-convert">
+    
+</head>
+<body>
+    <header>
+        <img id="image-initial" src="./IMG/image-main.png" alt="image initial money converter">
+    </header>
+    <div>
+        <p id="error"></p>
+    </div>
+    <form>
+        <div class="itemform">
+          <label for="content">Introduce tu valor a convertir</label>
+          <input type="number" name="content" id="content"  required>
+          <select name="currency" id="currency">
+            <option value="0">€</option>
+            <option value="1">¥</option>
+            <option value="2">$</option>
+            <option value="3">£</option>
+          </select>
+        </div>
+        
+        <div class="itemform">
+            <label for="content_result">Resultado de la conversion</label>
+            <input type="number" name="content_result" id="content_result" value="" disabled>
+            <select name="currency_result" id="currency_result" required>
+              <option value="0">$</option>
+              <option value="1">£</option>
+              <option value="2">¥</option>
+              <option value="3">€</option>
+            </select>
+          </div>
+        <div class="itemform">
+            <input type="submit" value="CONVERT" id="convert">
+        </div>
+        <div>
+            <p id="error"></p>
+        </div>
+    </form>
+</main>
+<footer id="finaly"> Curso FrontEnd HTML,CSS y JS
+</footer>
+    <script src="./JS/app.js"></script>    
+</body>
+</html>

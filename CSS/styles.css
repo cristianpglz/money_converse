@@ -1,0 +1,47 @@
+/*
+    STYLES FOR THE CURRENCY CONVERTER PROJECT AT THE MASTERMIND ACADEMY
+*/
+*{
+    font-family: 'PT Sans', sans-serif;
+}
+body{
+    background-color: #2F2D2E;
+    text-align: center;
+    color: #FCB73E;
+}
+
+main{
+    width: 300px;
+    margin: 30px auto 0px auto;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    font-size: 25px;
+}
+label{
+    display: block;
+    margin-bottom: 10px;
+}
+input[type="submit"]{
+    background-color: #FCB73E;
+    color: #fff;
+    font-weight: 400;
+    border-radius: 5px;
+    width: 100px;
+
+}
+
+/*IDs*/
+#image-initial{
+    width: 150px;
+    margin-top: 50px;
+}
+
+#finaly{
+    opacity: 0.5;
+}
+#error{
+    color: red;
+}
