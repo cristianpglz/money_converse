@@ -25,27 +25,27 @@
     <form>
         <div class="itemform">
           <label for="content">Introduce tu valor a convertir</label>
-          <input type="number" name="content" id="content"  required>
+          <input type="number" name="content" id="content" placeholder="0" min="1" required>
           <select name="currency" id="currency">
-            <option value="0">€</option>
-            <option value="1">¥</option>
-            <option value="2">$</option>
-            <option value="3">£</option>
+            <option value="euro" selected>€</option>
+            <option value="yuan">¥</option>
+            <option value="dolar">$</option>
+            <option value="libra">£</option>
           </select>
         </div>
         
         <div class="itemform">
-            <label for="content_result">Resultado de la conversion</label>
-            <input type="number" name="content_result" id="content_result" value="" disabled>
-            <select name="currency_result" id="currency_result" required>
-              <option value="0">$</option>
-              <option value="1">£</option>
-              <option value="2">¥</option>
-              <option value="3">€</option>
+            <label for="result">Resultado de la conversion</label>
+            <input type="number" name="content_result" id="result" placeholder="0" min="1" readonly>
+            <select name="currency_result" id="currency_result">
+                <option value="euro">€</option>
+                <option value="yuan">¥</option>
+                <option value="dolar" selected>$</option>
+                <option value="libra">£</option>
             </select>
           </div>
         <div class="itemform">
-            <input type="submit" value="CONVERT" id="convert">
+            <button type="submit" id="convert" onclick="cnvert()">CONVERTIR</button>
         </div>
         <div>
             <p id="error"></p>
