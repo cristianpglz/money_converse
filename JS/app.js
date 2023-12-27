@@ -123,9 +123,7 @@ const currency_resultinput = document.getElementById("currency_result");
 const contentinput = document.getElementById("content");
 const resultElement = document.getElementById("result");
 const errorElement = document.getElementById("error");
-const form = document.querySelector('form');
 
-form.addEventListener('submit', convert);
 
 // Conversion function
 function convert() {
