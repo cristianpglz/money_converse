@@ -24,36 +24,52 @@
     </div>
     <form>
         <div class="itemform">
-          <label for="content">Introduce tu valor a convertir</label>
-          <input type="number" name="content" id="content" value="" placeholder="0" min="1" required>
-          <select name="currency" id="currency">
-            <option value="euro" selected>€</option>
-            <option value="yuan">¥</option>
-            <option value="dolar">$</option>
-            <option value="libra">£</option>
-          </select>
+            <label for="content">Introduce tu valor a convertir</label>
+            <input type="number" name="content" id="content" value="" placeholder="0" min="1" required>
+            <select name="currency" id="currency">
+                <option value="euro" selected>€</option>
+                <option value="yuan">¥</option>
+                <option value="dolar">$</option>
+                <option value="libra">£</option>
+                <option value="peso">MXN</option>
+                <option value="franco">CHF</option>
+                <option value="dolar_canadiense">CA$</option>
+                <option value="yuan_chino">CN¥</option>
+                <option value="corona_danesa">DKK</option>
+                <option value="corona_noruega">NOK</option>
+                <!-- Add more options according to your needs -->
+            </select>
         </div>
         
         <div class="itemform">
-            <label for="result">Resultado de la conversion</label>
-            <input type="number" name="content_result" id="result" placeholder="0" min="1" readonly>
+            <label for="result">Resultado de la conversión</label>
+            <input type="number" name="content_result" id="result" value="" placeholder="0" min="1" readonly>
             <select name="currency_result" id="currency_result">
                 <option value="euro">€</option>
                 <option value="yuan">¥</option>
                 <option value="dolar" selected>$</option>
                 <option value="libra">£</option>
+                <option value="peso">MXN</option>
+                <option value="franco">CHF</option>
+                <option value="dolar_canadiense">CA$</option>
+                <option value="yuan_chino">CN¥</option>
+                <option value="corona_danesa">DKK</option>
+                <option value="corona_noruega">NOK</option>
+                <!-- Add more options according to your needs -->
             </select>
-          </div>
+        </div>
         <div class="itemform">
-            <button type="submit" id="convert">CONVERTIR</button>
+            <button type="button" onclick="convert()">CONVERTIR</button>
         </div>
         <div>
             <p id="error"></p>
         </div>
     </form>
 </main>
-<footer id="finaly"> Curso FrontEnd HTML,CSS y JS
-</footer>
-    <script src="./JS/app.js"></script>    
+<footer id="finaly"> 
+    <p class="more_information">*herramientas de cálculo obtenidos de las principales fuentes de datos del mercado,el resultado puede no ser exacto</p>
+    <p class="more_information">Curso FrontEnd HTML,CSS y JS</p>
+</footer>   
+    <script src="./JS/app.js"></script> 
 </body>
 </html>

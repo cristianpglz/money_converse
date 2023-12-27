@@ -30,7 +30,9 @@ button[type="submit"]{
     font-weight: 400;
     border-radius: 5px;
     width: 100px;
-
+}
+input,select{
+    font-size: 17px;
 }
 
 /*IDs*/
@@ -38,10 +40,14 @@ button[type="submit"]{
     width: 150px;
     margin-top: 50px;
 }
-
-#finaly{
-    opacity: 0.5;
-}
 #error{
     color: red;
+}
+
+
+/*CLASS*/
+.more_information{
+    opacity: 0.5;
+    margin-top: 10px;
+    font-size: 10px;
 }
