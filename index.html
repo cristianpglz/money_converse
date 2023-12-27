@@ -25,7 +25,7 @@
     <form>
         <div class="itemform">
           <label for="content">Introduce tu valor a convertir</label>
-          <input type="number" name="content" id="content" placeholder="0" min="1" required>
+          <input type="number" name="content" id="content" value="" placeholder="0" min="1" required>
           <select name="currency" id="currency">
             <option value="euro" selected>€</option>
             <option value="yuan">¥</option>
@@ -45,7 +45,7 @@
             </select>
           </div>
         <div class="itemform">
-            <button type="submit" id="convert" onclick="cnvert()">CONVERTIR</button>
+            <button type="submit" id="convert">CONVERTIR</button>
         </div>
         <div>
             <p id="error"></p>
