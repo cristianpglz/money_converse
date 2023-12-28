@@ -124,7 +124,6 @@ const contentinput = document.getElementById("content");
 const resultElement = document.getElementById("result");
 const errorElement = document.getElementById("error");
 
-
 // Conversion function
 function convert() {
     const fromCurrency = currencyinput.value;
@@ -132,13 +131,26 @@ function convert() {
 
     // Check if conversion rates are set for the selected currencies
     if (conversionRates[fromCurrency] && conversionRates[fromCurrency][toCurrency]) {
-        // Multiply the value of the source currency by the conversion rate
-        const converting = parseFloat(contentinput.value) * conversionRates[fromCurrency][toCurrency];
-        resultElement.value = converting.toFixed(2); // Limit decimals to two places
-    } else {
+        errorElement.textContent = undefined;
+        if (parseFloat(contentinput.value) === 0){
+            errorElement.textContent = "El numero debe deser mayor a 1";
+            return convert();
+        }
+        else if(isNaN(parseFloat(contentinput.value))){
+            errorElement.textContent = "Debe ingresar algun numero";
+            return convert();
+        }
+        else{
+            // Multiply the value of the source currency by the conversion rate
+            const converting = parseFloat(contentinput.value) * conversionRates[fromCurrency][toCurrency];
+            resultElement.value = converting.toFixed(2); // Limit decimals to two places
+        }
+    }
+    else {
         // Handling cases where there is no defined conversion rate
         console.error("Tasa de conversión no definida para la ruta seleccionada.");
         resultElement.value = 0; // Or you can set a default value
-        errorElement.textContent = 'Tasa de conversión no definida para la ruta seleccionada.';
+        errorElement.textContent = "Tasa de conversión no definida para la ruta seleccionada.";
+        return convert();
     }
 }
